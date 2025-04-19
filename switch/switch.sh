@@ -166,7 +166,7 @@ mkdir /userdata/system/configs/emulationstation 2>/dev/null
 # -------------------------------------------------------------------- 
 # FILL /USERDATA/SYSTEM/SWITCH/EXTRA
 path=/userdata/system/switch/extra
-url=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/extra
+url=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/extra
 wget -q -O "$path/batocera-config-ryujinx" "$url/batocera-config-ryujinx"
 wget -q -O "$path/batocera-config-ryujinx-avalonia" "$url/batocera-config-ryujinx-avalonia"
 wget -q -O "$path/batocera-config-yuzu" "$url/batocera-config-yuzu"
@@ -188,7 +188,7 @@ wget -q -O "$path/yuzuEA.png" "$url/yuzuEA.png"
 # -------------------------------------------------------------------- 
 # FILL /USERDATA/SYSTEM/SWITCH/CONFIGGEN/GENERATORS/RYUJINX
 path=/userdata/system/switch/configgen/generators/ryujinx
-url=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/configgen/generators/ryujinx
+url=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/configgen/generators/ryujinx
 wget -q -O "$path/__init__.py" "$url/__init__.py"
 wget -q -O "$path/ryujinxMainlineGenerator.py" "$url/ryujinxMainlineGenerator.py"
 # -------------------------------------------------------------------- 
