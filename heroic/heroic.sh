@@ -29,7 +29,7 @@ case $CHOICE in
         ;;
     2)
         echo "Heroic installer via AppImage..."
-        curl -Ls https://github.com/uureel/batocera.pro/raw/main/heroic/install.sh | bash
+        curl -Ls https://github.com/leponot/batocera.pro/raw/main/heroic/install.sh | bash
         ;;
     *)
         echo "No valid option selected or cancelled. Exiting."

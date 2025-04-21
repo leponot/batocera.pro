@@ -19,7 +19,7 @@ APPNAME="BALENA-ETCHER"
 appname=balena
 # 
 APPLINK=$(curl -s https://api.github.com/repos/balena-io/etcher/releases/latest | jq -r ".assets[] | select(.name | endswith(\".AppImage\")) | .browser_download_url" | grep AppImage)
-APPHOME="github.com/uureel/batocera-apps"
+APPHOME="github.com/leponot/batocera-apps"
 #---------------------------------------------------------------------
 # DEFINE LAUNCHER COMMAND >> 
 COMMAND='LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --no-sandbox --test-type "${@}"'
@@ -83,8 +83,8 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/uureel/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/uureel/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/leponot/batocera.pro/raw/main/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/leponot/batocera.pro/raw/main/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 

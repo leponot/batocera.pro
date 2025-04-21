@@ -3,7 +3,7 @@
 #                SWITCH EMULATORS UPDATER FOR BATOCERA               #
 #               ----------------------------------------             #
 #                    > https://discord.gg/hH5AfThG                   #
-#                > github.com/ordovice/batocera-switch               #
+#                > github.com/leponot/batocera-switch               #
 ######################################################################
 #   EMULATORS    /                                                   #
 #===============/                                                    #
@@ -53,7 +53,7 @@ THEME_COLOR_RYUJINXAVALONIA=BLUE
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#                > github.com/ordovice/batocera-switch               #
+#                > github.com/leponot/batocera-switch               #
 #                    > https://discord.gg/hH5AfThG                   #
 ######################################################################
 ######################################################################
@@ -458,12 +458,12 @@ link_ryujinxldn="$7"
 link_ryujinxavalonia="$8"
 # ---------------------------------------------------------------------------------- 
 # TEMPORARILY FREEZING UPDATES FOR RYUJINX: 
-#link_ryujinx=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
-#link_ryujinxavalonia=https://github.com/uureel/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinx=https://github.com/leponot/batocera.pro/raw/main/switch/extra/ryujinx-1.1.382-linux_x64.tar.gz
+#link_ryujinxavalonia=https://github.com/leponot/batocera.pro/raw/main/switch/extra/test-ava-ryujinx-1.1.382-linux_x64.tar.gz
 # ---------------------------------------------------------------------------------- 
 # TEMPORARILY FREEZING UPDATES FOR YUZU: 
 #link_yuzu=https://archive.org/download/yuzu-windows-msvc-20240304-537296095_202403/yuzu-mainline-20240304-537296095.AppImage
-#link_yuzuea=https://github.com/uureel/batocera.pro/raw/main/switch/extra/Linux-Yuzu-EA-3180.AppImage
+#link_yuzuea=https://github.com/leponot/batocera.pro/raw/main/switch/extra/Linux-Yuzu-EA-3180.AppImage
 # ----------------------------------------------------------------------------------
 # PATHS: 
 path_yuzu=/userdata/system/switch/yuzu.AppImage
@@ -610,7 +610,7 @@ echo -e "${T}$link_ryujinx" | sed 's,https://,> ,g'
 # --------------------------------------------------------
 # --------------------------------------------------------
 # \\ get dependencies for handling ryujinx
-link_tar=https://github.com/ordovice/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
+link_tar=https://github.com/leponot/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
 if [[ -e "$extra/batocera-switch-tar" ]]; then 
 chmod a+x "$extra/batocera-switch-tar"
 else 
@@ -625,7 +625,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/leponot/batocera.pro/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinx
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz
@@ -684,7 +684,7 @@ echo -e "${T}$link_ryujinxldn" | sed 's,https://,> ,g'
 # --------------------------------------------------------
 # --------------------------------------------------------
 # \\ get dependencies for handling ryujinxavalonia
-link_tar=https://github.com/ordovice/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
+link_tar=https://github.com/leponot/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
 if [[ -e "$extra/batocera-switch-tar" ]]; then 
    chmod a+x "$extra/batocera-switch-tar"
 else 
@@ -699,7 +699,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/leponot/batocera.pro/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxldn
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -760,7 +760,7 @@ echo -e "${T}$link_ryujinxavalonia" | sed 's,https://,> ,g'
 # --------------------------------------------------------
 # --------------------------------------------------------
 # \\ get dependencies for handling ryujinxavalonia
-link_tar=https://github.com/ordovice/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
+link_tar=https://github.com/leponot/batocera-switch/blob/main/system/switch/extra/batocera-switch-tar
 if [[ -e "$extra/batocera-switch-tar" ]]; then 
    chmod a+x "$extra/batocera-switch-tar"
 else 
@@ -775,7 +775,7 @@ mkdir $extra/$emu 2>/dev/null
 rm -rf $temp/$emu 2>/dev/null
 mkdir $temp/$emu 2>/dev/null
 cd $temp/$emu
-wget -q -O "$extra/$emu/xdg-mime" "https://github.com/uureel/batocera.pro/raw/main/switch/extra/xdg-mime"
+wget -q -O "$extra/$emu/xdg-mime" "https://github.com/leponot/batocera.pro/raw/main/switch/extra/xdg-mime"
 chmod a+x "$extra/$emu/xdg-mime"
 curl --progress-bar --remote-name --location $link_ryujinxavalonia
 $extra/batocera-switch-tar -xf $temp/$emu/*.tar.gz 2>/dev/null
@@ -866,7 +866,7 @@ release_ryujinx=$(curl -s https://github.com/Ryujinx/release-channel-master | gr
 link_ryujinx=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/ryujinx-$release_ryujinx-linux_x64.tar.gz
 # -------------------------------------------------------------------
 # RYUJINXLDN:
-link_ryujinxldn=https://github.com/uureel/batocera.pro/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
+link_ryujinxldn=https://github.com/leponot/batocera.pro/raw/main/switch/extra/ava-ryujinx-1.1.0-ldn3.0.1-linux_x64.tar.gz
 ## -------------------------------------------------------------------
 # RYUJINXAVALONIA:
 link_ryujinxavalonia=https://github.com/Ryujinx/release-channel-master/releases/download/$release_ryujinx/test-ava-ryujinx-$release_ryujinx-linux_x64.tar.gz
@@ -1106,14 +1106,14 @@ rm /userdata/roms/ports/updateryujinx.sh 2>/dev/null
 rm /userdata/roms/ports/updateryujinxavalonia.sh 2>/dev/null
 # --------------------------------------------------------------------
 # AUTOMATICALLY PULL THE LATEST EMULATORS FEATURES UPDATES / ALSO UPDATE THESE FILES: 
-url_switchkeys=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/configs/evmapy/switch.keys
-url_es_features_switch=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/configs/emulationstation/es_features_switch.cfg
-url_es_systems_switch=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/configs/emulationstation/es_systems_switch.cfg
-url_switchlauncher=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/configgen/switchlauncher.py
-url_GeneratorImporter=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/configgen/GeneratorImporter.py
-url_ryujinxMainlineGenerator=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/configgen/generators/ryujinx/ryujinxMainlineGenerator.py
-url_yuzuMainlineGenerator=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/configgen/generators/yuzu/yuzuMainlineGenerator.py
-url_sshupdater=https://raw.githubusercontent.com/ordovice/batocera-switch/main/system/switch/extra/batocera-switch-sshupdater.sh
+url_switchkeys=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/configs/evmapy/switch.keys
+url_es_features_switch=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/configs/emulationstation/es_features_switch.cfg
+url_es_systems_switch=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/configs/emulationstation/es_systems_switch.cfg
+url_switchlauncher=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/configgen/switchlauncher.py
+url_GeneratorImporter=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/configgen/GeneratorImporter.py
+url_ryujinxMainlineGenerator=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/configgen/generators/ryujinx/ryujinxMainlineGenerator.py
+url_yuzuMainlineGenerator=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/configgen/generators/yuzu/yuzuMainlineGenerator.py
+url_sshupdater=https://raw.githubusercontent.com/leponot/batocera-switch/main/system/switch/extra/batocera-switch-sshupdater.sh
 wget -q -O "/userdata/system/configs/evmapy/switch.keys" "$url_switchkeys"
 wget -q -O "/userdata/system/configs/emulationstation/es_features_switch.cfg" "$url_es_features_switch"
 wget -q -O "/userdata/system/configs/emulationstation/es_systems_switch.cfg" "$url_es_systems_switch"
@@ -1175,8 +1175,8 @@ export -f batocera_update_switch
 # --- include display output: 
 killall -9 xterm 2>/dev/null
 function get-xterm-fontsize {
-url_tput=https://github.com/uureel/batocera-switch/raw/main/system/switch/extra/batocera-switch-tput
-url_libtinfo=https://github.com/uureel/batocera-switch/raw/main/system/switch/extra/batocera-switch-libtinfo.so.6
+url_tput=https://github.com/leponot/batocera-switch/raw/main/system/switch/extra/batocera-switch-tput
+url_libtinfo=https://github.com/leponot/batocera-switch/raw/main/system/switch/extra/batocera-switch-libtinfo.so.6
 mkdir /userdata/system/switch 2>/dev/null
 mkdir /userdata/system/switch/extra 2>/dev/null
 extra=/userdata/system/switch/extra
